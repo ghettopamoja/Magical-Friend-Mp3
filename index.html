@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js exercise</title>
+        <link rel="stylesheet" href="style.css" id="theme-stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>    
+<body>
+    <div class="overlay-album">
+        <div class="close-album-overlay"><span>&times;</span></div>
+        <div class="content-album">
+            <div class="left-carousel">&#9664;</div> <!-- Left Arrow Symbol -->
+            <div class="album-container"></div>
+            <div class="right-carousel">&#9654;</div> <!-- Right Arrow Symbol -->
+        </div>
+    </div>  
+
+    <div class="container">
+        <div class="content">
+            <h2>Music Player From magical Friend</h2>
+            <video src="#" id="contentVid"></video>
+            <div class="music-container">
+                <div class="playlist">
+                    
+                    <div class="songs-category">
+                        <ul>
+                            <li><i class="fas fa-music"></i></li>        <!-- Songs -->
+                            <li><i class="fas fa-compact-disc"></i></li> <!-- Albums -->
+                            <li><i class="fas fa-user"></i></li>         <!-- Artists -->
+                            <li><i class="fas fa-angle-up"></i></li>     <!-- Collapse -->
+                        </ul>                        
+                    </div>
+
+                    <div class="song-list">
+                        <ul id="songs">
+                            <li data-song="tomp3.cc - - Jason Ross  Someone That I Needed Lyrics ft Dia Frampton.mp3" data-video="vid6.mp4" data-album="Airwave Music"> Jason Ross  Someone That I Needed</li>
+                            <li data-song="y2mate.com - BAHATI  MI AMOR  Official Video  For Skiza Skiza Dial 812831.mp3" data-video="y2mate.com - BAHATI  MI AMOR  Official Video  For Skiza Skiza Dial 812831_480.mp4" data-album="Bahati"> BAHATI  MI AMOR  Official</li>
+                            <li data-song="y2mate.com - BAHATI  MISSING YOU Official Video SKIZA SIMPLY DIAL 811845.mp3" data-video="y2mate.com - BAHATI  MISSING YOU Official Video SKIZA SIMPLY DIAL 811845_480.mp4" data-album="Bahati">BAHATI  MISSING YOU Official</li>
+                            <li data-song="y2mate.com - BAHATI Feat JOVIAL  SIZE YANGU  Official Video SKIZA DIAL 812826.mp3" data-video="y2mate.com - BAHATI Feat JOVIAL  SIZE YANGU  Official Video SKIZA DIAL 812826_480.mp4" data-album="Bahati"> BAHATI Feat JOVIAL  SIZE YANGU</li>
+                            <li data-song="y2mate.com - BAHATI Feat MEJJA  DEAR EX REMIX Official Video 812810.mp3" data-video="y2mate.com - BAHATI Feat MEJJA  DEAR EX REMIX Official Video 812810_720pHF.mp4" data-album="Bahati">BAHATI Feat MEJJA  DEAR EX REMIX</li>
+                            <li data-song="y2mate.com - BAHATI Feat NADIA MUKAMI  BABY YOU Official Video.mp3" data-video="y2mate.com - BAHATI Feat NADIA MUKAMI  BABY YOU Official Video_480.mp4" data-album="Bahati">BAHATI Feat NADIA MUKAMI  BABY YOU</li>
+                            <li data-song="y2mate.com - BAHATI Feat NADIA MUKAMI  PETE YANGU Official Video FOR SKIZA SIMPLY DIAL 812825.mp3" data-video="y2mate.com - BAHATI Feat NADIA MUKAMI  PETE YANGU Official Video FOR SKIZA SIMPLY DIAL 812825_480.mp4" data-album="Bahati">BAHATI Ft NADIA MUKAMI PETE YANGU</li>
+                            <li data-song="y2mate.com - BAHATI Feat TANASHA DONNA  ONE AND ONLY Official Video SKIZA DIAL 812829.mp3" data-video="y2mate.com - BAHATI Feat TANASHA DONNA  ONE AND ONLY Official Video SKIZA DIAL 812829_480.mp4" data-album="Bahati">BAHATI Ft TANASHA DONNA ONE AND ONLY</li>
+                            <li data-song="y2mate.com - BAHATI Feat VIVIAN  NAJUA Official Video TO SET SKIZA DIAL 811922.mp3" data-video="y2mate.com - BAHATI Feat VIVIAN  NAJUA Official Video TO SET SKIZA DIAL 811922_480.mp4" data-album="Bahati"> BAHATI Feat VIVIAN  NAJUA Official</li>
+                            <li data-song="y2mate.com - BEEFBYPAGEES JBNIGHT NURSES OFFICIALnightnurses81st BURUKLYNBOYZ fypシ viralvideo viral.mp3" data-video="y2mate.com - BEEFBYPAGEES JBNIGHT NURSES OFFICIALnightnurses81st BURUKLYNBOYZ fypシ viralvideo viral_v720P.mp4" data-album="night nurses">BEEF BY PAGEES JB [NIGHT NURSES OFFICIAL]</li>
+                            <li data-song="y2mate.com - Blame The Night  Arijit Singh  Holiday  Akshay Kumar Sonakshi Sinha  Aditi Singh Sharma (2).mp3" data-video="y2mate.com - Blame The Night  Arijit Singh  Holiday  Akshay Kumar Sonakshi Sinha  Aditi Singh Sharma_480p (1).mp4" data-album="Others">Blame The Night  Arijit Singh </li>
+                            <li data-song="y2mate.com - DEEPLY LOVEBYPAGEES JBVISUALIZER.mp3" data-video="y2mate.com - DEEPLY LOVEBYPAGEES JBVISUALIZER_360P.mp4" data-album="night nurses"> DEEPLY LOVE BY PAGEES</li>
+                            <li data-song="y2mate.com - Enya  Only Time Official 4K Music Video.mp3" data-video="y2mate.com - Enya  Only Time Official 4K Music Video_480p.mp4" data-album="Enya">Enya  Only Time</li>
+                            <li data-song="y2mate.com - Enya  Wild Child Instrumental.mp3" data-video="y2mate.com - Wild child with lyrics Enya_480.mp4" data-album="Enya"> Enya  Wild Child Instrumental</li>
+                            <li data-song="y2mate.com - Enya  Wild Child Official Music Video.mp3" data-video="y2mate.com - Enya  Wild Child Official Music Video_480p.mp4" data-album="Enya"> Wild Child Official</li>
+                            <li data-song="y2mate.com - Jay Melody  Baridi Official Video (1).mp3" data-video="y2mate.com - Jay Melody  Baridi Official Video_480.mp4" data-album="Jay Melody">Jay Melody  Baridi Official</li>
+                            <li data-song="y2mate.com - Jay Melody  Forever Official Music Lyrics.mp3" data-video="y2mate.com - Jay Melody  Forever Official Music Lyrics_720pHF.mp4" data-album="Jay Melody">Jay Melody  Forever Official</li>
+                            <li data-song="y2mate.com - Jay Melody  Mbali Nawe English lyrics  (1).mp3" data-video="y2mate.com - Jay Melody  Mbali Nawe English lyrics _720pHF.mp4" data-album="Jay Melody">Jay Melody  Mbali Nawe</li>
+                            <li data-song="y2mate.com - Jay Melody  Wa Peke Yangu Official Video.mp3" data-video="y2mate.com - Jay Melody  Wa Peke Yangu Official Video_720p.mp4" data-album="Jay Melody">Jay Melody  Wa Peke Yangu Official</li>
+                            <li data-song="y2mate.com - Jay MelodyNitasema Official Video.mp3" data-video="y2mate.com - Jay MelodyNitasema Official Video_480.mp4" data-album="Jay Melody">Jay Melody Nitasema Official</li>
+                            <li data-song="y2mate.com - Jay MelodySawa Official video.mp3" data-video="y2mate.com - Jay MelodySawa Official video_480.mp4" data-album="Jay Melody"> Jay MelodySawa Official</li>
+                            <li data-song="y2mate.com - Jaysoul ft Nadia Mukami  MapenziNakupenda Official Music Video (1).mp3" data-video="y2mate.com - Jaysoul ft Nadia Mukami  MapenziNakupenda Official Music Video_480.mp4" data-album="Jaysoul"> Jaysoul ft Nadia Mukami Nakupenda</li>
+                            <li data-song="y2mate.com - NOWE SWEETY  BAHATI Feat JOYCE WA MAMAA Official Video SKIZA DIAL 812821.mp3" data-video="y2mate.com - NOWE SWEETY  BAHATI Feat JOYCE WA MAMAA Official Video SKIZA DIAL 812821_480p.mp4" data-album="Bahati">NOWE SWEETY BAHATI Ft JOYCE WA MAMAA Official</li>
+                            <li data-song="y2mate.com - Otile Brown x Nadia Mukami  My Sugar  Official Music Video.mp3" data-video="y2mate.com - Otile Brown x Nadia Mukami  My Sugar  Official Music Video_480p.mp4" data-album="Otile Brown"> Otile Brown x Nadia Mukami My Sugar</li>
+                            <li data-song="y2mate.com - PRIZE.mp3" data-video="y2mate.com - PRIZE_1080p.mp4" data-album="night nurses">PRIZE</li>
+                            <li data-song="y2mate.com - Rayvanny  I love you Official Music Video SMS SKIZA 8548826 to 811.mp3" data-video="y2mate.com - Rayvanny  I love you Official Music Video SMS SKIZA 8548826 to 811_480.mp4" data-album="Rayvanny">Rayvanny I love you Official</li>
+                            <li data-song="y2mate.com - Rayvanny  Naogopa Video SMS SKIZA 8548827 to 811.mp3" data-video="y2mate.com - Rayvanny  Naogopa Video SMS SKIZA 8548827 to 811_480.mp4" data-album="Rayvanny">Rayvanny  Naogopa Video</li>
+                            <li data-song="y2mate.com - Rayvanny Ft Jay Melody  DANCE Lyrics Video.mp3" data-video="y2mate.com - Rayvanny Ft Jay Melody  DANCE Lyrics Video_360p.mp4" data-album="Rayvanny">Rayvanny Ft Jay Melody  DANCE</li>
+                            <li data-song="y2mate.com - Rayvanny Ft Mayorkun  GimmiDat Official Music Video.mp3" data-video="y2mate.com - Rayvanny Ft Mayorkun  GimmiDat Official Music Video_480.mp4" data-album="Rayvanny">Rayvanny Ft Mayorkun  GimmiDat</li>
+                            <li data-song="y2mate.com - Rayvanny Ft Messias MaricoaTeamo official Video SMS SKIZA 8548831 to 811.mp3" data-video="y2mate.com - Rayvanny Ft Messias MaricoaTeamo official Video SMS SKIZA 8548831 to 811_480.mp4" data-album="Rayvanny"> Rayvanny Ft Messias Maricoa Teamo</li>
+                            <li data-song="y2mate.com - Rayvanny Ft Zuchu  I Miss You Official Music Video.mp3" data-video="y2mate.com - Rayvanny Ft Zuchu  I Miss You Official Music Video_360p.mp4" data-album="Rayvanny">Rayvanny Ft Zuchu  I Miss You</li>
+                            <li data-song="y2mate.com - Rayvanny Ft Zuchu  Number One Official Video.mp3" data-video="y2mate.com - Rayvanny Ft Zuchu  Number One Official Video_480.mp4" data-album="Rayvanny">Rayvanny Ft Zuchu  Number One</li>
+                            <li data-song="y2mate.com - Rudeboy  Together Official Video ft Patoranking (1).mp3" data-video="y2mate.com - Rudeboy  Together Official Video ft Patoranking_480.mp4" data-album="Others">Rudeboy Together Official</li>
+                            <li data-song="y2mate.com - SIMP PAGEES JB FT CJAY FT KING VIBEOFFICIAL AUDIOnightnurses81st.mp3" data-video="y2mate.com - SIMP PAGEES JB FT CJAY FT KING VIBEOFFICIAL AUDIOnightnurses81st_1080p.mp4" data-album="night nurses">SIMP PAGEES JB FT CJAY FT KING VIBE OFFICIAL</li>
+                            <li data-song="y2mate.com - Sovern  Always Lyrics (2).mp3" data-video="y2mate.com - Sovern  Always Lyrics_1080p.mp4" data-album="Airwave Music"> Sovern  Always</li>
+                            <li data-song="y2mate.com - SWEET DARLING  BAHATI Feat SATB Official Video FOR SKIZA SIMPLY DIAL 812816.mp3" data-video="y2mate.com - SWEET DARLING  BAHATI Feat SATB Official Video FOR SKIZA SIMPLY DIAL 812816_480p.mp4" data-album="Bahati">SWEET DARLING  BAHATI Feat SATB</li>
+                            <li data-song="y2mate.com - The Breakup Song Full Video  ADHMRanbir AnushkaArijitBadshahJonitaNakashPritam (2).mp3" data-video="y2mate.com - The Breakup Song Full Video  ADHMRanbir AnushkaArijitBadshahJonitaNakashPritam_480.mp4" data-album="Others">The Breakup Song Full Video</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="dancing-div">
+                        <video id="video-element"></video>
+                        <h2 id="message">Waiting for you to  select a song</h2>
+                        <div class="overlay-message"></div>
+                        <div class="overlay-audio">
+                            <img src="music14.png" alt="album-logo" id="album-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="now-playing">
+                    <div class="song-title">
+                        <h2>Choose  a song</h2>
+                    </div>
+                    <div class="song-image">
+                        <img src="logo.png" alt="logo" id="music-image">
+                        <div class="audio-bar-container">
+                            <div class="audio-bar"></div>
+                            <div class="audio-bar"></div>
+                            <div class="audio-bar"></div>
+                            <div class="audio-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="song-controls">
+                        <div class="progress-track">
+                            <div class="progress-bar"></div>
+                            <div class="time-duration">
+                                <div class="current-time"></div>
+                                <div class="song-duration"></div>        
+                            </div>
+                        </div>
+                        
+                        <div class="song-buttons">
+                            <button>[ <i class="fas fa-play"></i> ]</button>       <!-- Play -->
+                            <button>[ <i class="fas fa-step-backward"></i> ]</button> <!-- Prev -->
+                            <button>[ <i class="fas fa-step-forward"></i> ]</button>  <!-- Next -->
+                            <button>[ <i class="fas fa-random"></i> ]</button>     <!-- Shuffle -->
+                            <button>[ <i class="fas fa-sync-alt"></i> ]</button>   <!-- Loop -->
+                            <button>[ <i class="fas fa-volume-up"></i> ]</button>  <!-- Volume -->
+                            <button>[ <i class="fas fa-photo-video"></i> ]</button> <!-- Video -->
+                            <button disabled>[ <i class="fas fa-music"></i> ]</button>      <!-- Music -->
+                        </div>                        
+                        
+                        <div class="volume-controls">
+                            <input type="range" id="volume-control" min="0" max="100" value="100" title="volume">
+                        </div>
+                    </div>
+        </div>
+        </div>
+        
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>
