@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    background-image: url('music14.png');
+    background-image: url('music12.png');
     background-size: cover; /* Ensure the image covers the entire element */
     background-position: center; /* Center the background image */
     background-color: #000;
@@ -1018,134 +1018,6 @@ body {
     color: #fff; /* Example additional style */
 }
 
-
-@media screen and (max-width: 800px) {
-    body {
-        font-size: 14px; /* Adjust the font size for readability */
-    }
-
-    .container{
-        background-color: #333;
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: #f0f0f0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    .content {
-        background-image: url('logo.png'); /* Add your background image */
-        background-size: cover; /* Ensure the image covers the entire element */
-        background-position: center; /* Center the background image */
-        color: #f0f0f0;
-        width: 100%;
-        height: 100vh;
-        border-radius: 5px;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
-        overflow-y: auto;
-        margin-bottom: 30px;
-        position: relative; /* Ensure the overlay positions correctly */
-    }
-
-    .content h2 {
-        font-size: 18px; /* Smaller heading size */
-        padding-top: 10px;
-    }
-
-    .content .music-container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .music-container .playlist,
-    .music-container .now-playing {
-        width: 100%;
-        height: auto; /* Allow sections to adjust their height */
-    }
-
-    .music-container .playlist .songs-category ul li {
-        width: 30%;
-        height: auto;
-        padding: 5px;
-        font-size: 16px; /* Smaller font size for better fit */
-    }
-
-    .music-container .playlist .song-list ul li {
-        height: 40px; /* Reduce the height */
-        font-size: 16px; /* Adjust font size */
-        padding-left: 5px; /* Reduce padding */
-    }
-
-    .music-container .now-playing .song-title {
-        height: auto; /* Allow the title section to adjust its height */
-        font-size: 16px; /* Adjust font size */
-        padding: 10px;
-        border-bottom-width: 2px; /* Slightly thinner border */
-    }
-
-    .music-container .now-playing .song-image {
-        width: 80%; /* Reduce width */
-        height: 35vh; /* Adjust height */
-        margin-top: 20px; /* Reduce margin */
-    }
-
-    .music-container .now-playing .song-controls {
-        height: auto; /* Adjust the height of controls */
-        margin-top: 15px;
-        padding: 10px; /* Add some padding */
-    }
-
-    .song-controls .current-time,
-    .song-controls .song-duration {
-        width: 40px; /* Reduce width */
-        height: 20px; /* Reduce height */
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .now-playing .song-buttons {
-        height: auto; /* Allow button section to adjust its height */
-        margin-top: 10px;
-    }
-
-    .now-playing .song-buttons button {
-        font-size: 16px; /* Adjust button font size */
-        padding: 5px 8px; /* Adjust padding */
-    }
-
-    .song-controls .progress-track{
-        width: 99%;
-        height: 8px;
-        background-color: #ccc;
-        cursor: pointer;
-        border-radius: 2.5px;
-        
-    }
-
-    .music-container .playlist .dancing-div{
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 98%;
-        height: 50vh;
-        margin-top: 30px;
-        display: none;
-        animation: myAnim2 2s ease 0s 1 normal forwards;
-        text-align: center;
-        flex-direction: column-reverse;
-        overflow: hidden;
-    }
-}
-
 .content.message {
     display: flex;
     align-items: center;
@@ -1155,3 +1027,1040 @@ body {
 .content.message h2{
     font-size: 50px;
 }
+
+@media screen and (max-width:800px) {
+    /* Basic Reset and Layout */
+    body {
+        background-color: #f8f9fa;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        background-image: url('music12.png');
+        background-size: cover; /* Ensure the image covers the entire element */
+        background-position: center; /* Center the background image */
+        background-color: #000;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #f0f0f0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: relative; /* Required to position the ::before pseudo-element */
+        z-index: 2; /* Ensure container content is on top of the black layer */
+    }
+    
+    
+    .content {
+        background-size: cover; /* Ensure the image covers the entire element */
+        background-position: center; /* Center the background image */
+        color: #f0f0f0;
+        width: 98%;
+        height: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        overflow-y: auto;
+        margin-bottom: 30px;
+        position: relative; /* Ensure the overlay positions correctly */
+        background-color: rgba(8, 22, 38, 0.5);
+    
+    }
+    
+    .content::before {
+        content: ""; /* Ensure the ::before pseudo-element is rendered */
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* Black overlay with transparency */
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 1; /* Ensure it sits above the content */
+    }
+    
+    .content > * {
+        position: relative; /* Ensure content inside .content is above the overlay */
+        z-index: 2; /* Make sure content is above the overlay */
+    }
+    
+    .content h2{
+        padding-top: 20px;
+        font-size: 24px;
+        
+    }
+    .container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Makes sure the video covers the whole area without distortion */
+        z-index: -1; /* Sends the video to the background */
+        pointer-events: none; /* Prevents interaction with the video */
+    }
+    .content h2 {
+        text-align: center;
+    }
+    
+    .content .music-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+        z-index: 2;
+        
+        
+    }
+    .music-container .playlist{ 
+        width: 99%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        
+    }
+    
+    .music-container .playlist .songs-category{
+        width: 100%;
+        height: 10vh;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        border-bottom:3px solid #0056b3;
+    }
+    .music-container .playlist .songs-category ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 10px;
+        
+    }
+    .music-container .playlist .songs-category ul li {
+         background-color: transparent;
+         width: 30%;
+         height: 100%;
+         padding-top: 20px;
+         margin: auto 7px;
+         text-align: center;
+         font-size: 20px;
+         color: #f0f0f0;
+         cursor: pointer;
+        padding: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        
+    }
+    
+    .songs-category ul li.active{
+        border: 2px solid #f0f0f0;
+    }
+    
+    .songs-category ul li.active i{
+        color: #e8d805;
+        animation: myAnim 2s ease 0s 3 normal backwards;
+    }
+    .music-container .playlist .songs-category ul li:hover{
+        background-color: #007bff;
+    }
+    .music-container .playlist .song-list {
+        background-color: transparent;
+        width: 100%;
+        height: 50vh;
+        margin-top: 10px;
+        color: #0056b3;
+        overflow: hidden;
+        display: flex;
+        background-color: transparent;
+    }
+    
+    .music-container .playlist .dancing-div{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 50vh;
+        margin-top: 10px;
+        display: none;
+        animation: myAnim2 2s ease 0s 1 normal forwards;
+        text-align: center;
+        flex-direction: column-reverse;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        align-items: center;
+       
+    }
+    
+    .overlay-message.exit{
+        animation: myAnim3 2s ease 0s 1 normal forwards;
+    }
+    
+    /* Style the main overlay container */
+    .dancing-div .overlay-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        display: none;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 87, 179, 0.5); /* Dark transparent background */
+        z-index: 1000; /* Ensure it appears on top */
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* Style each event container inside the overlay */
+    .dancing-div .overlay-message .overlay-event {
+        background-color: transparent; /* Semi-transparent background */
+        color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease-out;
+    }
+    
+    /* Style the image and title container */
+    .dancing-div .overlay-message .overlay-event .event-mentions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        
+        
+    }
+    
+    /* Style the event image container */
+    .dancing-div .overlay-message .overlay-event .event-image {
+        background-color: rgba(0, 123, 255, 0.5); /* Semi-transparent blue background */
+        width: 120px; /* Adjusted size for better visibility */
+        height: 120px;
+        border-radius: 10%; /* Ensures the container is a perfect circle */
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Prevents the image from overflowing */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+        background-repeat: no-repeat;
+    }
+    
+    /* Style the event image itself */
+    .dancing-div .overlay-message .overlay-event .event-image img {
+        width: 100%;
+        height: 100%; /* Maintain the image's aspect ratio */
+        object-fit: cover; /* Ensures the image covers the container evenly */
+    }
+    
+    
+    /* Style the event title */
+    .dancing-div .overlay-message .overlay-event .event-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #f0f0f0;
+        
+    }
+    
+    /* Style the buttons container */
+    .dancing-div .overlay-message .overlay-event .event-buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    /* Style the buttons */
+    .dancing-div .overlay-message .overlay-event .event-buttons button {
+        background-color: transparent;
+        border: 2px solid #f0f0f0;
+        color: #f0f0f0;
+        font-size: 1.2em;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    /* Hover effect for buttons */
+    .dancing-div .overlay-message .overlay-event .event-buttons button:hover {
+        background-color: #f0f0f0;
+        color: #0056b3;
+    }
+    
+    /* Fade-in animation for the event */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    
+    /* Style the buttons */
+    .event-buttons button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        font-size: 1em;
+        transition: background-color 0.2s;
+    }
+    
+    /* Hover effect for buttons */
+    .event-buttons button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Animation for fade-in effect */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    .dancing-div .overlay-audio{
+        background-color: rgba(0, 0, 0, 1); /* Slightly transparent background */
+        color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+        position: absolute;
+        top: 50%; /* Center it vertically */
+        left: 50%; /* Center it horizontally */
+        transform: translate(-50%, -50%); /* Adjust for exact centering */
+        display: none; /* Initially hidden */
+        z-index: 2; /* Ensure it appears above the video */
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    .overlay-audio img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    @keyframes myAnimt {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .dancing-div .overlay-audio img{
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    @keyframes myAnim3 {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        100% {
+            opacity: 0;
+            transform: translateX(-250px);
+        }
+    }
+    
+    .music-container .playlist .dancing-div video {
+        position: absolute; /* Position the video absolutely within the container */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the video covers the container without distortion */
+        z-index: -1; /* Place the video behind other content */
+        
+    }
+    
+    .music-container .playlist .dancing-div video.not-allowed {
+        filter: grayscale(100%); /* Apply black and white effect */
+        cursor: not-allowed; /* Change the cursor to indicate that interaction is not allowed */
+    }
+    
+    .music-container .playlist .dancing-div h2{
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding-bottom: 20px;
+        width: 100%;
+        
+    }
+    
+    @keyframes myAnim {
+        0% {
+            opacity: 1;
+        }
+    
+        50% {
+            opacity: 0.2;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes myAnim2 {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .music-container .playlist .song-list:hover{
+        overflow-y: auto;
+    }
+    /* Scrollbar Track */
+    .music-container .playlist .song-list::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    /* Scrollbar Thumb */
+    .music-container .playlist .song-list::-webkit-scrollbar-thumb {
+        background-color: #e8d805; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners for the thumb */
+        border: 1px solid #333; /* Space around thumb */
+    }
+    
+    /* Scrollbar Track */
+    .music-container .playlist .song-list::-webkit-scrollbar-track {
+        background-color: transparent; /* Color of the scrollbar track */
+        border-radius: 10px; /* Rounded corners for the track */
+    }
+    
+    /* Scrollbar Corner */
+    .music-container .playlist .song-list::-webkit-scrollbar-corner {
+        background-color: #ffffff; /* Color of the corner where both scrollbars meet */
+    }
+    
+    /* Hover effect on Thumb */
+    .music-container .playlist .song-list::-webkit-scrollbar-thumb:hover {
+        background-color: #004494; /* Darker color when hovered */
+    }
+    
+    .music-container .playlist .song-list ul{
+        margin: auto;
+        
+    }
+    .music-container .playlist .song-list ul li {
+        border: 2px solid #0056b3;
+        height: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        font-weight: bold;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 10px;
+        transition: border 0.75 ease-in;
+    }
+    .music-container .playlist .song-list ul li:hover{
+        border: 2px solid #f0f0f0;
+        color: #f0f0f0;
+    }
+    .music-container .playlist .song-list ul li.active{
+        background-color: #007bff;
+        color: #f0f0f0;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        border-radius: 5px;
+    }
+    
+    .music-container .playlist .song-list ul li.pause{
+        background-color: transparent;
+        border-color: #f0f0f0;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        border-radius: 5px;
+    }
+    
+    .music-container .now-playing{
+        width:98%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+       background-color: transparent;
+    }
+    
+    .music-container .now-playing .song-title{
+        background-color: transparent;
+        width: 100%;
+        height: 9vh;
+        text-align: center;
+        border-bottom: 3px solid #0056b3;
+        margin-top: 10px;
+        color: #f0f0f0;
+        overflow:hidden;
+    }
+    
+    .music-container .now-playing .song-image {
+        background-color: transparent;
+        margin-top: 30px;
+        width: 90%;
+        height: 50vh;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: myAnim4 2s ease 0s 1 normal forwards;
+    }
+    
+    .song-image.intro{
+        animation: myAnim4 2s ease 0s 1 normal forwards;
+    }
+    
+    @keyframes myAnim4 {
+        0%,
+        100% {
+            transform: translateY(0) rotate(0);
+            transform-origin: 50% 50%;
+        }
+    
+        15% {
+            transform: translateY(-30px) rotate(6deg);
+        }
+    
+        30% {
+            transform: translateY(15px) rotate(-6deg);
+        }
+    
+        45% {
+            transform: translateY(-15px) rotate(3.6deg);
+        }
+    
+        60% {
+            transform: translateY(9px) rotate(-2.4deg);
+        }
+    
+        75% {
+            transform: translateY(-6px) rotate(1.2deg);
+        }
+    }
+    
+    .music-container .now-playing .song-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        
+    }
+    
+    .music-container .now-playing .song-image .audio-bar-container{
+        position: absolute; /* Position it absolutely within the song-image */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Centering with transform */
+        width: 100%; /* Adjust width as needed */
+        height: 100%; /* Adjust height as needed */
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .music-container .now-playing .song-image .audio-bar-container .audio-bar { 
+        width: 20%; 
+        height: 8vh; 
+        background-color: #0056b3; 
+        margin: 0 20px;
+        animation: shake 2s ease 0s 1 normal forwards;
+    }
+    
+    /* Keyframes for the pulse animation */
+    @keyframes shake {
+        0%,
+        100% {
+            transform: translateY(0) rotate(0);
+            transform-origin: 50% 50%;
+        }
+    
+        15% {
+            transform: translateY(-30px) rotate(6deg);
+        }
+    
+        30% {
+            transform: translateY(15px) rotate(-6deg);
+        }
+    
+        45% {
+            transform: translateY(-15px) rotate(3.6deg);
+        }
+    
+        60% {
+            transform: translateY(9px) rotate(-2.4deg);
+        }
+    
+        75% {
+            transform: translateY(-6px) rotate(1.2deg);
+        }
+    }
+    
+    @keyframes halt {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    
+    @keyframes myAnim5 {
+        0% {
+            opacity: 0;
+            transform: translateX(250px) rotate(200deg);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+    }
+    
+    .music-container .now-playing .song-controls{
+        background-color:transparent;
+        width: 100%;
+        min-height: 25vh;
+        margin-top: 20px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    
+    .song-controls .current-time,
+    .song-controls .song-duration{
+        background-color: #000;
+        width: 100px;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        color: #e8d805;
+        justify-content: center;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    
+    .song-controls .current-time{
+        margin-left: 1px;
+    }
+    
+    .song-controls .song-duration{ 
+        margin-right: 1px;
+    }
+    .song-controls .time-duration{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+    .song-controls .progress-track{
+        width: 99%;
+        height: 8px;
+        background-color: #cccccc7e;
+        cursor: pointer;
+        border-radius: 2.5px;
+        margin-top: 10px;
+        
+    }
+    .song-controls .progress-bar {
+        width: 0; /* Start at 0% */
+        height: 100%;
+        transition: width 0.1s linear; /* Smooth transition as the bar progresses */
+        display: flex;
+        justify-content: left;
+        background-color: #e8d805;
+        transition: width 0.1s linear; /* Smooth transition as the bar progresses */
+        border-radius: 2.5px; /* Rounded edges for the progress bar */
+        position: relative; /* Position for potential additional styling */
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+    }
+    
+    .song-controls .progress-bar:hover{
+        height: 100%;
+        background-color: #0056b3;
+    }
+    
+    .music-container .now-playing .song-controls .volume-controls{
+        margin-top: 20px;
+        width: 99%;
+        background-color: transparent;
+        height: 30px;
+        display:flex;
+    }
+    .volume-controls input {
+        -webkit-appearance: none; /* Remove default styling */
+        appearance: none; /* Remove default styling */
+        width: 100%;
+        height: 15px;
+        background: linear-gradient(to right, #007bff, #1e90ff); /* Slider track gradient */
+        border-radius: 10px;
+        outline: none;
+        opacity: 1; /* Make the input visible */
+        transition: opacity 0.3s ease-in-out; /* Smooth transition */
+        pointer-events: auto; /* Allow interaction */
+        cursor: pointer; /* Change cursor to pointer */
+        opacity: 1;
+    }
+    
+    /* Show the volume input when the volume-controls are hovered */
+    .volume-controls:hover input {
+        opacity: 1; /* Make the input visible */
+        pointer-events: auto; /* Allow interaction */
+    }
+    /* WebKit specific styles for the thumb (the draggable part of the slider) */
+    .volume-controls input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px; /* Thumb width */
+        height: 15px; /* Thumb height */
+        background: #e8d805; /* Thumb color */
+        border: 2px solid #007bff; /* Thumb border */
+        border-radius: 50%; /* Round thumb */
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow to the thumb */
+        transition: background 0.3s ease-in-out; /* Smooth transition for thumb */
+    }
+    
+    .volume-controls input::-webkit-slider-thumb:hover {
+        background: #007bff; /* Change color on hover */
+    }
+    
+    .volume-controls input::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .volume-controls input:focus {
+        outline: none;
+    }
+    
+    /* Additional style for other browsers */
+    .volume-controls input::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    .volume-controls input::-moz-range-track {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #007bff, #1e90ff);
+        border-radius: 10px;
+    }
+    
+    .volume-controls input::-ms-thumb {
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    .volume-controls input::-ms-track {
+        width: 100%;
+        height: 100%;
+        background: transparent; /* Hide the default track */
+        border-color: transparent;
+        color: transparent;
+    }
+    .now-playing .song-buttons{
+        width: 100%;
+        display: flex;
+        min-height: 6vh;
+        background-color:transparent;
+        margin-top: 60px;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+    }
+    .now-playing .song-buttons button{
+        background-color: transparent;
+        color: #0056b3;
+        font-size: 14px;
+        border: none;
+        padding: 2px 4px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        border-radius: 5px;
+        border: 2px solid #0056b3;
+    
+    }
+    .now-playing .song-buttons button:active{
+        background-color: #e8d805;
+    }
+    .now-playing .song-buttons button:disabled{
+        border-color: red;
+        color: red;
+        cursor: not-allowed;
+        opacity: 0.3;
+    
+    }
+    .now-playing .song-buttons button:first-child{
+        margin-left: 10px;
+    }
+    .now-playing .song-buttons button:last-child{
+        margin-right: 10px;
+    }
+    
+    .now-playing .song-buttons button:hover{
+        border-color:#f0f0f0;
+        color: #f0f0f0;
+        
+    }
+    
+    .now-playing .song-buttons button.playing{
+        border-color:#f0f0f0;
+        color: #f0f0f0;
+    }
+    
+    /* Active state color */
+    .song-buttons button i.active {
+        color: #e8d805; /* Change to your desired active color */
+    }
+    
+    .overlay-album {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Transparent overlay */
+        top: 0;
+        left: 0;
+        position: fixed; /* Fixed position to cover the entire viewport */
+        z-index: 1000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .close-album-overlay{
+        background-color: #e8d805;
+        color: #000;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .close-album-overlay:hover{
+        background-color: #0056b3;
+        color: #f0f0f0;
+    }
+    .content-album {
+        width: 98%;
+        height: 50vh;
+        background-color: rgba(13, 111, 209, 0.8);
+        border: 2px solid #0056b3;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .album-container {
+        display: flex;
+        overflow: hidden; /* Enable horizontal scrolling */
+        scroll-behavior: smooth; /* Smooth scrolling */
+        width: 100%; /* Full width to accommodate scrolling */
+        align-items: center;
+        height: 100%;
+        align-items: center;
+        flex-direction: row;
+      background-color: #000;
+    }
+    
+    
+    .album {
+        flex: 0 0 auto; /* Prevent shrinking or growing */
+        width: 300px; /* Width of each album */
+        margin: 0 10px; /* Space between albums */
+        text-align: center;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        color: #f0f0f0;
+        border-radius: 10px;
+    }
+    .album:hover{
+        border: 2px solid #0056b3;
+        box-shadow: rgba(5, 47, 120, 0.4) 0px 2px 4px, rgba(5, 47, 120, 0.3) 0px 7px 13px -3px, rgba(5, 47, 120, 0.2) 0px -3px 0px inset;
+    }
+    
+    .left-carousel, .right-carousel {
+        width: 50px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); /* Background color for controls */
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001; /* Ensure controls are above other content */
+        
+    }
+    .left-carousel:hover{
+        border-right: 2px solid #f0f0f0;
+    }
+    
+    .right-carousel:hover{
+        border-left: 2px solid #f0f0f0;
+    }
+    .left-carousel:hover, .right-carousel:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+        color: #e8d805;
+    }
+    
+    .album .image-album {
+        width: 200px; /* Set width of the album image container */
+        height: 200px; /* Set height of the album image container */
+        border-radius: 10%; /* Rounded corners */
+        display: flex; /* Flexbox layout */
+        overflow: hidden; /* Hide overflow */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        border: 2px solid #0056b3; /* Border color and thickness */
+        background-color: #333; /* Optional: background color for visibility */
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .album .image-album img {
+        width: 100%; /* Ensure the image takes up full width of the container */
+        height: 100%; /* Ensure the image takes up full height of the container */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+        display: block; /* Remove any default spacing around the image */
+    }
+    
+    .album .name-album{
+        margin-top: 20px;
+        background-color: transparent;
+        color: #f0f0f0;
+        border: 2px solid #0056b3;
+        width: 200px;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .album .buttons-album{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        color: #f0f0f0;
+        border: 2px solid #0056b3;
+        width: 200px;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .album .buttons-album:nth-child(even):hover {
+        background-color: #0056b3; /* Hover effect for even items */
+        color: white; /* Example additional style */
+    }
+    
+    .album .buttons-album:nth-child(odd):hover {
+        background-color: #007bff; /* Hover effect for odd items */
+        color: #fff; /* Example additional style */
+    }
+    
+    
+    
+    .content.message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .content.message h2{
+        font-size: 50px;
+    }
+    }
